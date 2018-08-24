@@ -33,7 +33,23 @@ public class Service {
 
         return new JSONObject(appAccount);
 
-
     }
 
+    public int returnNumberOfAccounts(String firstName) {
+
+        int count = 0;
+        for (int i = 1; i <= appAccount.size(); i++) {
+            if (appAccount.get(i).getFirstName().equals(firstName)){
+                count++;
+            }
+        }
+
+        return count;
+
+
+
+
+
+
+    }
 }
